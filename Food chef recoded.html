@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Food chef recoded</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            body{
+                margin: 0;
+            }
+            .slide-container{
+                width: 800px;
+                height: 600px;
+                margin-left: auto;
+                margin-right: auto; 
+                overflow: hidden;
+                text-align: center; 
+            }
+            .image-container{
+                width: 5050px;
+                height: 800px;
+                position: relative;
+                transition: left 2s;
+                -webkit-transition: left 2s;/*for chrome*/
+                -moz-transition: left 2s;/* for firefox */
+                -o-transition: left 2s;/* for opera */
+            }
+            .slider-image{
+                float: left;
+                margin: 0;
+                padding: 0;
+                height: 800px;
+            }
+            /* @media(max-width: 700px){
+                .slider-image{
+                    height: 300px;
+                }
+            } */
+            .button-container{
+                top: -20px;
+                position: relative;
+            }
+            .slider-button{
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                border-radius: 5px;
+                background-color: white;
+            }
+            #slider-image-1:target ~ .image-container{
+                left: 0px;
+            }
+            #slider-image-2:target ~ .image-container{
+                left: -1680px;
+            }
+            #slider-image-3:target ~ .image-container{
+                left: -3370px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="slide-container">
+            <span id="slider-image-1"></span>
+            <span id="slider-image-2"></span>
+            <span id="slider-image-3"></span>
+            <div class="image-container">
+                <img src="images/slide1.jpg" class="slider-image">
+                <img src="images/slide2.jpg" class="slider-image">
+                <img src="images/slide3.jpg" class="slider-image">
+            </div>
+            <div class="button-container">
+                <a href="#slider-image-1" class="slider-button"></a>
+                <a href="#slider-image-2" class="slider-button"></a>
+                <a href="#slider-image-3" class="slider-button"></a>
+            </div>
+        </header>
+    <!-- <script>
+        //menu toggle button - jquery
+        $(document).ready(function(){
+            $(".menu-icon").on("click", function(){
+                $("nav ul").toggleClass("showing");
+            })
+        })
+        
+        
+    </script> -->
+    </body>
+</html>

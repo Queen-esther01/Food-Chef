@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Food chef</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide1.jpg);
+                height: 600px;
+                background-position: center;
+                background-size: cover;
+                transform : transition 1s;
+            }
+            @media(max-width: 700px){
+                header{
+                    height: 350px;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            .logo-text{
+                border: 1px solid red;
+                padding: 5px;
+                font-weight: bold;
+                font-size: 1.5em;
+                line-height: 1.5;
+                color: white;
+            }
+            [food-logo]{
+                background-color: red;
+            }
+            .logo{
+                position:absolute;
+                /* float: left; */
+                margin: 10px 36px;
+            }
+            @media(max-width: 900px){
+                .logo{
+                    top: 0;
+                    margin-top: 10px;
+                }
+            }
+            @media(max-width: 600px){
+                .logo-text{
+                    font-size: 1.3em;
+                }
+                .logo{
+                    margin-left: 20px;
+                    margin-top: 13px;
+                }
+            }
+            nav{
+                position: relative;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.836);
+            }
+            
+            nav ul{
+                list-style: none;
+                color: white;
+                overflow: hidden;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                transition: 1s;
+            }
+            /* this makes the nav disappear at device-width of 580px or less */
+            @media(max-width: 900px){
+                nav ul{
+                    max-height: 0px;
+                    background-color: rgba(0, 0, 0, 0.836);
+                }
+            }
+            nav ul li{
+                display: inline-block;
+                padding: 16px;
+            }
+
+            @media(max-width: 700px){
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 24px 0;
+                    text-align: center;
+                }
+            }
+            i{
+                border: 1px solid white;
+                padding: 5px 15px;
+            }
+            .menu-icon{
+                color: white;
+                width: 100%;
+                text-align: right;
+                box-sizing: border-box;
+                padding: 5px 24px;
+                cursor: pointer;
+                display: none;
+            }
+            @media(max-width: 900px){
+                .menu-icon{
+                    display: block;
+                }
+                .showing{
+                    max-height: 28em;
+                }
+            }
+            
+            #header-text-container{
+                width: 80%;
+                margin: auto;
+                padding: 8%;
+                color: white;
+                margin-top: 20px;
+            }
+            #header-text{
+                font-size: 2em;
+            }
+            #header-link{
+                background-color: yellowgreen;
+                width: 100px;
+                text-align: center;
+                padding: 6px;
+            }
+            #horizontal-line{
+                border-bottom: 2px solid white;
+                color: rgba(0,0,0,0.1);
+                display: inline;
+            }
+            .button-container{
+                display: block;
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                margin-top: 90px;
+            }
+            @media(max-width: 700px){
+                .button-container{
+                    margin-top: -30px;
+                }
+                
+            }
+            .slider-button{
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                border-radius: 5px;
+                background-color: white;
+            }
+            .about-us-heading{
+                text-align: center;
+            }
+            @media(max-width: 600px){
+                #header-text{
+                    font-size: 1.5em;
+                }
+                .slider-button{
+                    margin-top: 70px;
+                }
+                #header-text-container{
+                    width: 100%;
+                }
+            }
+            
+            #tagline{
+                font-size: 12px;
+                color: grey;
+            }
+            #about-us-text{
+                color: yellowgreen;
+            }
+            .about-us-image-container{
+                width: 80%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+                grid-gap: 10px;
+            }
+            .about-us-image-container img{
+                width: 100%;
+                display: block;
+            }
+            .description-container{
+                width: 100%;
+                background-color: green;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .description-heading, .description-text{
+                font-size: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header class="wrapper" >
+                <nav>
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="logo">
+                        <span food-logo class="logo-text">Food</span><span chef-logo class="logo-text">Chef</span>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Team</li>
+                            <li>Our Food</li>
+                            <li>Testimonials</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div> 
+                </nav>
+
+                <div id="header-text-container">
+                    <h1 id="header-text">WELCOME TO OUR<br/>RESTAURANT</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                    <span id="header-link">Learn More</span>
+                    <p id="horizontal-line">LearnMore</p>
+                </div>
+
+                <div class="button-container">
+                    <a href="#slider-image-1" class="slider-button" id="slider-button1"></a>
+                    <a href="#slider-image-2" class="slider-button" id="slider-button2"></a>
+                    <a href="#slider-image-3" class="slider-button" id="slider-button3"></a>
+                </div>
+            </header>
+        </div>
+
+        <section id="about-us-section">
+            <div class="about-us-heading">
+                <h2>About Us</h2>
+                <h3 id="about-us-text">About Our Restaurant Food<br><span id="tagline">Lorem ipsum dolor sit Proin elit metus, dapibus ac orci vitae</span></h3>
+            </div>
+        
+            <div class="about-us-image-container">
+                <div class="description-container">
+                    <div class="description-inner-container">
+                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p> -->
+                    </div>
+                </div>
+                <img src="images/about1.jpg">
+                <div class="description-container">
+                    <div>
+                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p> -->
+                    </div>
+                </div>
+                <img src="images/about2.jpg">
+                <div class="description-container">
+                    <div>
+                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p> -->
+                    </div>
+                </div>
+                <img src="images/about3.jpg">
+            </div>
+        </section>
+    </body>
+    <script>
+        //menu toggle button
+        $(document).ready(function(){
+            $(".menu-icon").on("click", function(){
+                $("nav ul").toggleClass("showing");
+                $('#header-text-container').css('color','white');
+            })
+        })
+        
+        let sliderButton1 = document.getElementById('slider-button1');
+        let sliderButton2 = document.getElementById('slider-button2');
+        let sliderButton3 = document.getElementById('slider-button3');
+        let header = document.querySelector('.wrapper');
+
+        sliderButton1.addEventListener('click', change = () => {
+            sliderButton1.style.backgroundColor = 'red';
+            sliderButton2.style.backgroundColor = 'white';
+            sliderButton3.style.backgroundColor = 'white';
+            header.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide1.jpg)';
+            header.style.animation = 'scale(1.5)';
+        })
+
+        sliderButton2.addEventListener('click', changeToSlide2 = () => {
+            sliderButton2.style.backgroundColor = 'red';
+            sliderButton1.style.backgroundColor = 'white'
+            sliderButton3.style.backgroundColor = 'white';
+            // header.style.backgroundImage ="url('images/slide1.jpg')";
+            header.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide2.jpg)';
+        })
+
+        sliderButton3.addEventListener('click', changeToSlide3 = () => {
+            sliderButton3.style.backgroundColor = 'red';
+            sliderButton2.style.backgroundColor = 'white';
+            sliderButton1.style.backgroundColor = 'white';
+            // header.style.backgroundImage ="url('images/slide3.jpg')";
+            header.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide3.jpg)';
+        })
+    </script>
+</html>
