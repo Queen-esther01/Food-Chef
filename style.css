@@ -364,7 +364,7 @@ color: whitesmoke;
     line-height: 1.7em;
 }
 .all-services-elements{
-    width: 90vw;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -376,7 +376,9 @@ color: whitesmoke;
     left: 170px;
 }
 @media(max-width: 700px){
-    
+    .all-services-elements{
+        width: 90%;
+    }
     #chef-image{
         left: 90px;
     }
@@ -403,7 +405,7 @@ color: whitesmoke;
     left: 250px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 900px){
     .service-food-image{
         width: 30%;
         margin: 0;
