@@ -394,6 +394,7 @@ color: whitesmoke;
 .service-food-image-container{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 .service-food-image{
     position: relative;
