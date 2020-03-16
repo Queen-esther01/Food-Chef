@@ -364,12 +364,11 @@ color: whitesmoke;
     line-height: 1.7em;
 }
 .all-services-elements{
-    width: 80%;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: burlywood;
 }
 #chef-image{
     height: 280px;
@@ -377,11 +376,9 @@ color: whitesmoke;
     left: 170px;
 }
 @media(max-width: 700px){
-    .all-services-elements{
-        width: 70%;
-    }
+    
     #chef-image{
-        left: 100px;
+        left: 90px;
     }
 }
 #chef-image-container{
@@ -404,9 +401,14 @@ color: whitesmoke;
     margin: 10px;
     left: 250px;
 }
+
 @media(max-width: 800px){
     .service-food-image{
+        width: 30%;
+        margin: 0;
         left: 80px;
-        border: 1px solid red
+    }
+    .service-food-image-container{
+        flex-direction: row;
     }
 }
