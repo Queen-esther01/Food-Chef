@@ -1,206 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Food chef - Best food in Town</title>
+        <title>Food chef - Best cuisine in Town</title>
         <meta charset="utf-8">
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+        
+        <!--Links for theglyphicons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <style>
-            html,body{
-                margin: 0;
-                padding: 0;
-            }
-            header{
-                background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide1.jpg);
-                height: 600px;
-                background-position: center;
-                background-size: cover;
-                transform : transition 1s;
-            }
-            @media(max-width: 700px){
-                header{
-                    height: 350px;
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
-            .logo-text{
-                border: 1px solid red;
-                padding: 5px;
-                font-weight: bold;
-                font-size: 1.5em;
-                line-height: 1.5;
-                color: white;
-            }
-            [food-logo]{
-                background-color: red;
-            }
-            .logo{
-                position:absolute;
-                /* float: left; */
-                margin: 10px 36px;
-            }
-            @media(max-width: 900px){
-                .logo{
-                    top: 0;
-                    margin-top: 10px;
-                }
-            }
-            @media(max-width: 600px){
-                .logo-text{
-                    font-size: 1.3em;
-                }
-                .logo{
-                    margin-left: 20px;
-                    margin-top: 13px;
-                }
-            }
-            nav{
-                position: relative;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.836);
-            }
-            
-            nav ul{
-                list-style: none;
-                color: white;
-                overflow: hidden;
-                padding: 0;
-                text-align: center;
-                margin: 0;
-                transition: 1s;
-            }
-            /* this makes the nav disappear at device-width of 580px or less */
-            @media(max-width: 900px){
-                nav ul{
-                    max-height: 0px;
-                    background-color: rgba(0, 0, 0, 0.836);
-                }
-            }
-            nav ul li{
-                display: inline-block;
-                padding: 16px;
-            }
-
-            @media(max-width: 700px){
-                nav ul li{
-                    box-sizing: border-box;
-                    width: 100%;
-                    padding: 24px 0;
-                    text-align: center;
-                }
-            }
-            i{
-                border: 1px solid white;
-                padding: 5px 15px;
-            }
-            .menu-icon{
-                color: white;
-                width: 100%;
-                text-align: right;
-                box-sizing: border-box;
-                padding: 5px 24px;
-                cursor: pointer;
-                display: none;
-            }
-            @media(max-width: 900px){
-                .menu-icon{
-                    display: block;
-                }
-                .showing{
-                    max-height: 28em;
-                }
-            }
-            
-            #header-text-container{
-                width: 80%;
-                margin: auto;
-                padding: 8%;
-                color: white;
-                margin-top: 20px;
-            }
-            #header-text{
-                font-size: 2em;
-            }
-            #header-link{
-                background-color: yellowgreen;
-                width: 100px;
-                text-align: center;
-                padding: 6px;
-            }
-            #horizontal-line{
-                border-bottom: 2px solid white;
-                color: rgba(0,0,0,0.1);
-                display: inline;
-            }
-            .button-container{
-                display: block;
-                width: 50%;
-                margin: auto;
-                text-align: center;
-                margin-top: 90px;
-            }
-            @media(max-width: 700px){
-                .button-container{
-                    margin-top: -30px;
-                }
-                
-            }
-            .slider-button{
-                display: inline-block;
-                height: 10px;
-                width: 10px;
-                border-radius: 5px;
-                background-color: white;
-            }
-            .about-us-heading{
-                text-align: center;
-            }
-            @media(max-width: 600px){
-                #header-text{
-                    font-size: 1.5em;
-                }
-                .slider-button{
-                    margin-top: 70px;
-                }
-                #header-text-container{
-                    width: 100%;
-                }
-            }
-            
-            #tagline{
-                font-size: 12px;
-                color: grey;
-            }
-            #about-us-text{
-                color: yellowgreen;
-            }
-            .about-us-image-container{
-                width: 80%;
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
-                grid-gap: 10px;
-            }
-            .about-us-image-container img{
-                width: 100%;
-                display: block;
-            }
-            .description-container{
-                width: 100%;
-                background-color: green;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .description-heading, .description-text{
-                font-size: 60%;
-            }
-        </style>
+        
     </head>
     <body>
         <div>
@@ -246,37 +64,131 @@
                 <h3 id="about-us-text">About Our Restaurant Food<br><span id="tagline">Lorem ipsum dolor sit Proin elit metus, dapibus ac orci vitae</span></h3>
             </div>
         
-            <div class="about-us-image-container">
-                <div class="description-container">
+            <!-- <div class="about-us-image-container">
+                <div class="description-container" id="card1">
                     <div class="description-inner-container">
-                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
                         <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
                         adipiscing elit. Maecenas cursus ligula
-                        quismales uada placerat</p> -->
+                        quismales uada placerat</p>
                     </div>
                 </div>
                 <img src="images/about1.jpg">
-                <div class="description-container">
-                    <div>
-                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                <div class="description-container" id="card2">
+                    <div class="description-inner-container">
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
                         <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
                         adipiscing elit. Maecenas cursus ligula
-                        quismales uada placerat</p> -->
+                        quismales uada placerat</p>
                     </div>
                 </div>
                 <img src="images/about2.jpg">
-                <div class="description-container">
-                    <div>
-                        <!-- <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                <div class="description-container" id="card3">
+                    <div class="description-inner-container">
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
                         <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
                         adipiscing elit. Maecenas cursus ligula
-                        quismales uada placerat</p> -->
+                        quismales uada placerat</p>
                     </div>
                 </div>
                 <img src="images/about3.jpg">
+            </div> -->
+
+            <div class="parent">
+                <div class="description-container" id="card1">
+                    <div class="description-inner-container">
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p>
+                    </div>
+                </div>
+        
+                <img src="images/about1.jpg">
+        
+                <div class="description-container" id="card2">
+                    <div class="description-inner-container">
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p>
+                    </div>
+                </div>
+        
+                <img src="images/about2.jpg">
+        
+                <div class="description-container" id="card3">
+                    <div class="description-inner-container">
+                        <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                        <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                        adipiscing elit. Maecenas cursus ligula
+                        quismales uada placerat</p>
+                    </div>
+                </div>
+        
+                <img src="images/about3.jpg">
             </div>
         </section>
+
+        
+
+        <section class="service-section">
+            <h2>Our Services</h2>
+            <div class="all-services-elements">
+                <div id="glyphicon-section-container">
+                    <div class="glyphicon-section">
+                        <div>
+                            <div class="glyphicon-container">
+                            </div>
+                            <p><span class="glyphicon glyphicon-glass"></span></p>    
+                        </div>
+                        
+                        <p class="service-description">Lorem ipsum dolor sit amet,consecteteur<br>
+                            adipiscing elit. Maecenas cursus ligula quis<br>
+                            malesuada placerat</p>
+                    </div>
+        
+                    <div class="glyphicon-section">
+                        <div>
+                            <div class="glyphicon-container">
+                            </div>
+                            <p><span class="glyphicon glyphicon-cutlery"></span></p>    
+                        </div>
+                        
+                        <p class="service-description">Lorem ipsum dolor sit amet,consecteteur<br>
+                            adipiscing elit. Maecenas cursus ligula quis<br>
+                            malesuada placerat</p>
+                    </div>
+                    
+                    <div class="glyphicon-section">
+                        <div>
+                            <div class="glyphicon-container">
+                            </div>
+                            <p><span class="glyphicon glyphicon-star"></span></p>    
+                        </div>
+                        
+                        <p class="service-description">Lorem ipsum dolor sit amet,consecteteur<br>
+                            adipiscing elit. Maecenas cursus ligula quis<br>
+                            malesuada placerat</p>
+                    </div>
+                </div>
+                
+                <div id="chef-image-container">
+                    <img src="images/c1.png" id="chef-image">
+                    <div class="service-food-image-container">
+                        <img src="images/service1.jpg" class="service-food-image">
+                        <img src="images/service2.jpg" class="service-food-image">
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </section>
+        
+        
     </body>
+    
     <script>
         //menu toggle button
         $(document).ready(function(){

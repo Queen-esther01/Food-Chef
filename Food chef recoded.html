@@ -1,90 +1,141 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-    <head>
-        <title>Food chef recoded</title>
-        <meta charset="utf-8">
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <style>
-            body{
-                margin: 0;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Grid</title>
+    <style>
+        .parent{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+            grid-gap: 10px;
+        }
+        .description-container{
+            width: 100%;
+            background-color: teal;
+            text-align: center;
+            height: 220px;
+        }
+        .description-inner-container{
+            padding: 30px;
+        }
+        .parent img{
+            width: 100%;
+            display: block;
+            height: 220px;
+        }
+        @media(max-width: 900px){
+            .parent{
+                width: 90%;
+                grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
             }
-            .slide-container{
-                width: 800px;
-                height: 600px;
-                margin-left: auto;
-                margin-right: auto; 
-                overflow: hidden;
-                text-align: center; 
+            .description-inner-container{
+                padding-top: 10px;
             }
-            .image-container{
-                width: 5050px;
-                height: 800px;
-                position: relative;
-                transition: left 2s;
-                -webkit-transition: left 2s;/*for chrome*/
-                -moz-transition: left 2s;/* for firefox */
-                -o-transition: left 2s;/* for opera */
+            
+        }
+        @media(max-width: 700px){
+            .description-heading{
+                color: red;
+                font-size: 0.8em;
             }
-            .slider-image{
-                float: left;
-                margin: 0;
-                padding: 0;
-                height: 800px;
+            .description-text{
+                color: blue;
+                font-size: 0.7em;
             }
-            /* @media(max-width: 700px){
-                .slider-image{
-                    height: 300px;
-                }
-            } */
-            .button-container{
-                top: -20px;
-                position: relative;
+            .description-inner-container{
+                padding-top: 10px;
             }
-            .slider-button{
-                display: inline-block;
-                height: 10px;
-                width: 10px;
-                border-radius: 5px;
-                background-color: white;
+            .parent img{
+                height: 150px;
             }
-            #slider-image-1:target ~ .image-container{
-                left: 0px;
+            .description-container{
+                height: 150px;
             }
-            #slider-image-2:target ~ .image-container{
-                left: -1680px;
+        }
+        @media(max-width: 600px){
+
+            .parent img{
+                height: 130px;
             }
-            #slider-image-3:target ~ .image-container{
-                left: -3370px;
+            .description-container{
+                height: 130px;
             }
-        </style>
-    </head>
-    <body>
-        <header class="slide-container">
-            <span id="slider-image-1"></span>
-            <span id="slider-image-2"></span>
-            <span id="slider-image-3"></span>
-            <div class="image-container">
-                <img src="images/slide1.jpg" class="slider-image">
-                <img src="images/slide2.jpg" class="slider-image">
-                <img src="images/slide3.jpg" class="slider-image">
-            </div>
-            <div class="button-container">
-                <a href="#slider-image-1" class="slider-button"></a>
-                <a href="#slider-image-2" class="slider-button"></a>
-                <a href="#slider-image-3" class="slider-button"></a>
-            </div>
-        </header>
-    <!-- <script>
-        //menu toggle button - jquery
-        $(document).ready(function(){
-            $(".menu-icon").on("click", function(){
-                $("nav ul").toggleClass("showing");
-            })
-        })
+            .description-heading{
+                color:brown;
+                font-size: 0.6em;
+            }
+            .description-text{
+                color: blue;
+                font-size: 0.5em;
+            }
+            .description-inner-container{
+                padding-top: 0;
+            }
+        }
         
-        
-    </script> -->
-    </body>
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="description-container">
+            <div class="description-inner-container">
+                <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                adipiscing elit. Maecenas cursus ligula
+                quismales uada placerat</p>
+            </div>
+        </div>
+
+        <img src="images/about1.jpg">
+
+        <div class="description-container">
+            <div class="description-inner-container">
+                <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                adipiscing elit. Maecenas cursus ligula
+                quismales uada placerat</p>
+            </div>
+        </div>
+
+        <img src="images/about2.jpg">
+
+        <div class="description-container">
+            <div class="description-inner-container">
+                <h4 class="description-heading">LOREM IPSUM DOLOR SITAMET</h4>
+                <p class="description-text">Lorem ipsum dolor sit amet,consecteteur
+                adipiscing elit. Maecenas cursus ligula
+                quismales uada placerat</p>
+            </div>
+        </div>
+
+        <img src="images/about3.jpg">
+    </div>
+
+
+    <div class="container">
+        <h2>Glass Glyph</h2>
+        <p>Glass icon: <span class="glyphicon glyphicon-glass"></span></p>    
+        <p>Glass icon as a link:
+          <a href="#">
+            <span class="glyphicon glyphicon-glass"></span>
+          </a>
+        </p>
+        <p>Glass icon on a button:
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-glass"></span> Glass 
+          </button>
+        </p>
+        <p>Glass icon on a styled link button:
+          <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-glass"></span> Glass 
+          </a>
+        </p> 
+      </div>
+</body>
 </html>
