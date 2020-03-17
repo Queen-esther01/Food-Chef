@@ -296,7 +296,7 @@ color: whitesmoke;
     height: 150px;
 }
 .description-inner-container{
-    padding: 20px;
+    padding: 15px;
 }
 }
 @media(max-width: 600px){
@@ -314,7 +314,7 @@ color: whitesmoke;
     font-size: 0.5em;
 }
 .description-inner-container{
-    padding: 20px;
+    padding: 15px;
 }
 }
 
@@ -369,6 +369,7 @@ color: whitesmoke;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 #chef-image{
     height: 280px;
@@ -407,11 +408,122 @@ color: whitesmoke;
 
 @media(max-width: 900px){
     .service-food-image{
-        width: 30%;
         margin: 0;
         left: 80px;
     }
     .service-food-image-container{
         flex-direction: row;
     }
+}
+
+#team-section{
+    margin-top: 50px;
+}
+#team-section h2{
+    text-align: center;
+}
+#team-picture-section{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+    grid-gap: 10px;
+}
+
+.team-image{
+    width: 100%;
+}
+@media(max-width: 800px){
+    #team-picture-section{
+        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+    }
+    /* #team-picture-section{
+        width: 70%;
+    }
+    .team-image{
+        height: 350px;
+    } */
+}
+.image-container{
+    border-top: 3px solid red;
+    border-left: 3px solid red;
+    border-right: 3px inset rgb(190, 185, 185);
+    border-bottom: 3px outset white;
+    padding: 6px;
+}
+figcaption{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: rgb(61, 56, 56);
+}
+.team-image-desc{
+    text-align: center;
+    color: rgb(131, 117, 117);
+}
+@media(max-width:600px){
+    .team-image-desc{
+        font-size: 0.8em;
+    }
+}
+
+
+#food-section{
+    margin-top: 60px;
+    
+}
+#food-section h2{
+    text-align: center;
+}
+#food-image-section{
+    width: 99%;
+    margin: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+    grid-gap: 5px;
+}
+#food-image-section img{
+    width: 100%;
+}
+@media(max-width: 600px){
+    #food-image-section{
+        grid-template-columns: repeat(auto-fit,minmax(45%,1fr));
+    }
+}
+
+#food-image-section p{
+    position: absolute;
+    font-size: 0.8em;
+    padding: 10px;
+    color: rgb(211, 211, 211);
+}
+#food-image-section > div{
+    position: relative;
+}
+#food-image-section > div::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+#food-image-section div p > span{
+    color: white;
+}
+
+
+#testimonial-section{
+    margin-top: 30px;
+    height: 300px;
+    background-image: url(images/stats.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#testimonial-heading{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
 }
