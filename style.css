@@ -598,7 +598,7 @@ figcaption{
     width: 50%;
 }
 /* Uncomment if you want contact section to become full width */
-/* @media(max-width:700px){
+@media(max-width:700px){
     #contact-container{
         flex-direction: column;
     }
@@ -608,7 +608,7 @@ figcaption{
     #contact-form-section{
         width: 100%;
     }
-} */
+}
 #contact-heading{
     color: white;
     margin-left: 50%;
@@ -628,15 +628,17 @@ figcaption{
     margin-right: 10px;
     color: white;
 }
+.contact-details-container p{
+    color: rgb(240, 240, 240);
+}
 @media(max-width: 800px){
     .contact-details-container,#contact-heading{
-        margin-left: 30%;
+        margin-left: 10%;
     }
     .contact-details-container h4{
         font-size: 1em;
     }
     .contact-details-container p{
-        color: rgb(240, 240, 240);
         font-size: 0.8em;
     }
     #contact-heading{
@@ -652,9 +654,11 @@ figcaption{
     margin-top: 20px;
     width: 70%;
     border: none;
+    outline: none;
     background: transparent;
     border-bottom: 1px solid rgb(211, 211, 211);
     padding: 5px;
+    color: white;
 }
 #contact-input-container input::placeholder{
     color: rgb(211, 211, 211);
@@ -664,14 +668,17 @@ figcaption{
     margin-top: 20px;
     width: 70%;
     border: none;
+    outline: none;
     background: transparent;
     border-bottom: 1px solid rgb(211, 211, 211);
     padding-bottom: 130px;
+    color: white;
 }
 #contact-area-button{
     text-align: left;
     margin-top: 10px;
     border: none;
+    outline: none;
     color: white;
     background-color: rgb(119, 187, 18);
     padding: 7px 25px;
