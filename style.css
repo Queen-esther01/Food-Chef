@@ -97,7 +97,7 @@ nav ul li{
         text-align: center;
     }
 }
-i{
+.hamburgerIcon{
     border: 1px solid white;
     padding: 5px 15px;
 }
@@ -416,6 +416,7 @@ color: whitesmoke;
     }
 }
 
+/* Team Section */
 #team-section{
     margin-top: 50px;
 }
@@ -467,10 +468,9 @@ figcaption{
     }
 }
 
-
+/* Food Section */
 #food-section{
-    margin-top: 60px;
-    
+    margin-top: 60px;  
 }
 #food-section h2{
     text-align: center;
@@ -514,7 +514,7 @@ figcaption{
     color: white;
 }
 
-
+/* Testimonial Section */
 #testimonial-section{
     margin-top: 30px;
     height: 300px;
@@ -526,4 +526,165 @@ figcaption{
     color: white;
     text-align: center;
     padding-top: 40px;
+}
+#testimonial-wrapper{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+.testimonial-text-container{
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 10px;
+    width: 50%;
+}
+.testimonial-text-container p{
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: rgb(211, 211, 211);
+}
+
+.next-prev-image{
+    width: 30px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+.quote-icon{
+    font-size: 2em;
+}
+.testimonial-text-container h3 > span{
+    color: rgb(211, 211, 211);
+    font-weight: 100;
+}
+.testimonial-text-container h3{
+    font-size: 1em;
+}
+@media(max-width: 800px){
+    .next-prev-image{
+        margin-top: 50px;
+    }
+    .testimonial-text-container p{
+        font-size: 0.4em;
+    }
+    .quote-icon{
+        font-size: 1.5em;
+    }
+    .testimonial-text-container h3{
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+}
+
+/* Contact Section */
+#contact-section h2{
+    text-align: center;
+    padding-top: 15px;
+}
+#contact-container{
+    display: flex;
+}
+#contact-details-section{
+    background-color: rgb(141, 219, 23);
+    width: 50%;
+}
+#contact-form-section{
+    background-image: url(images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+}
+/* Uncomment if you want contact section to become full width */
+/* @media(max-width:700px){
+    #contact-container{
+        flex-direction: column;
+    }
+    #contact-details-section{
+        width: 100%;
+    }
+    #contact-form-section{
+        width: 100%;
+    }
+} */
+#contact-heading{
+    color: white;
+    margin-left: 50%;
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+.contact-details-container{
+    display: flex;
+    margin-left: 50%;
+    margin-top: 20px;
+}
+.contact-details-container h4{
+    font-weight: bold;
+}
+.contact-icon{
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+}
+@media(max-width: 800px){
+    .contact-details-container,#contact-heading{
+        margin-left: 30%;
+    }
+    .contact-details-container h4{
+        font-size: 1em;
+    }
+    .contact-details-container p{
+        color: rgb(240, 240, 240);
+        font-size: 0.8em;
+    }
+    #contact-heading{
+        font-size: 1.3em;
+    }
+}
+
+#contact-input-container{
+    margin: 40px 0 0 50px;
+    position: relative;
+}
+.contact-area-form{
+    margin-top: 20px;
+    width: 70%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding: 5px;
+}
+#contact-input-container input::placeholder{
+    color: rgb(211, 211, 211);
+    font-size: 1em;
+}
+#message-box{
+    margin-top: 20px;
+    width: 70%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 130px;
+}
+#contact-area-button{
+    text-align: left;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(119, 187, 18);
+    padding: 7px 25px;
+}
+#contact-area-button-container{
+    display: flex;
+    justify-content: center;
+}
+@media(max-width: 800px){
+    #contact-input-container input::placeholder{
+        font-size: 0.8em;
+    }
+    #contact-area-button{
+        font-size: 0.8em;
+    }
 }
