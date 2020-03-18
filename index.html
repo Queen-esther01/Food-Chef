@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Food chef - Best cuisine in Town</title>
+        <title>Food chef - Best cuisine in Nigeria</title>
         <meta charset="utf-8">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -178,10 +178,7 @@
                     
                 </div>
                 
-                <div class="service-food-image-container">
-                    <!-- <img src="images/service1.jpg" class="service-food-image"> -->
-                    <img src="images/service2.jpg" class="service-food-image">
-                </div>
+                
 
             </div>
         </section>
@@ -356,6 +353,37 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <div id="map-image-container">
+                <img id="map-image">
+            </div>
+        </section>
+
+        <section id="subscription-section">
+            <div id="subscription-section-container">
+                <p id="subscribe-text">Subscribe to get the latest updates right to your inbox</p>
+                <form id="subscribe-form">
+                    <input placeholder="Enter your Email...">
+                    <button>SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div id="footer-container">
+                <div id="social-icon-container">
+                    <p>Follow us on: </p>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div id="copyright-text">
+                    <p>&copy;2020 Food Chef. All rights reserved | Design by <span>W3layouts</span></p>
+                </div>
+            </div>
+        </footer>
     </body>
     
     <script>
@@ -395,5 +423,12 @@
             // header.style.backgroundImage ="url('images/slide3.jpg')";
             header.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/slide3.jpg)';
         })
+
+        let mapImage = document.getElementById('map-image');
+        let mapImageContainer = document.getElementById('map-image-container')
+        mapImage.src = `https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+                        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+                        &key=AIzaSyDlt3uahzYanyNPxrakd2gFREYwR3CnZtE`
     </script>
 </html>

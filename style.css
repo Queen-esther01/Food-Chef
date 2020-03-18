@@ -375,14 +375,14 @@ color: whitesmoke;
 #chef-image{
     height: 280px;
     position: relative;
-    left: 170px;
+    left: 150px;
 }
 @media(max-width: 700px){
     .all-services-elements{
         width: 90%;
     }
     #chef-image{
-        left: 90px;
+        left: 80px;
     }
 }
 /* #chef-image-container{
@@ -395,22 +395,22 @@ color: whitesmoke;
         flex-direction: column;
     }
 } */
-.service-food-image-container{
-    /* display: flex;
-    flex-direction: column; */
+/* .service-food-image-container{
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-}
+} */
 .service-food-image{
     position: relative;
-    width: 155px;
-    margin: 10px;
+    width: 150px;
+    margin: 50px;
     left: 250px;
 }
 
-@media(max-width: 900px){
+@media(max-width: 700px){
     .service-food-image{
-        margin: 0;
-        left: 80px;
+
+        left: 20px;
     }
 }
 
@@ -595,7 +595,7 @@ figcaption{
     background-size: cover;
     width: 50%;
 }
-/* Uncomment if you want contact section to become full width */
+/*comment to put contact section in landscape mode */
 @media(max-width:700px){
     #contact-container{
         flex-direction: column;
@@ -684,6 +684,7 @@ figcaption{
 #contact-area-button-container{
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
 }
 @media(max-width: 800px){
     #contact-input-container input::placeholder{
@@ -691,5 +692,102 @@ figcaption{
     }
     #contact-area-button{
         font-size: 0.8em;
+    }
+}
+
+
+/* Map Section */
+#map-image{
+    width: 100%;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+@media(max-width:700px){
+    #map-image{
+        display: block;
+    }
+}
+
+/*Subscription section */
+#subscription-section{
+    background-color: rgb(255, 67, 77);
+    margin-top: 2px;
+}
+#subscription-section-container{
+    width: 80%;
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+#subscribe-text{
+    margin-top: 15px;
+}
+#subscribe-form input{
+    background-color: rgba(255, 255, 255, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.739);
+    margin-top: 10px;
+    padding: 4px;
+    outline: none;
+}
+#subscribe-form input::placeholder{
+    color: rgba(255, 255, 255, 0.568);
+    font-size: 0.8em;
+}
+#subscribe-form button{
+    border: none;
+    outline: none;
+    padding: 9px 10px 6px 10px;
+    margin-left: -4px;
+    border: 1px solid white;
+    background-color: rgb(129, 184, 19);
+    font-size: 0.7em;
+}
+@media(max-width:900px){
+    #subscribe-text{
+        font-size: 0.8em;
+    }
+    #subscription-section-container{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Footer section */
+#social-icon-container{
+    /* width: 20%;
+    display: flex;
+    justify-content: space-between; */
+    display: flex;
+}
+#social-icon-container i,
+#social-icon-container p,
+#copyright-text{
+    margin: 10px;
+}
+#footer-container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+@media(max-width:900px){
+    #footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    #social-icon-container{
+        justify-content: center;
+    }
+    #social-icon-container i,
+    #social-icon-container p{
+        margin: 10px;
+    }
+    #copyright-text{
+    margin: 0;
     }
 }
